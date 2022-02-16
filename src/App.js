@@ -1,13 +1,16 @@
 import './App.css';
+import LoginProvider from './LoginProvider/Provider';
+import AppContent from "./AppContent/AppContent";
+import {CookiesProvider} from "react-cookie";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>Affordmed Interview</p>
-      </header>
-    </div>
-  );
+    return (
+        <CookiesProvider>
+            <LoginProvider>
+                <AppContent/>
+            </LoginProvider>
+        </CookiesProvider>
+    );
 }
 
 export default App;
